@@ -1,0 +1,5 @@
+# Contacts
+AppBundle\Entity\LottoNumber:
+  lottonumber{1..100}:
+    year: <year()>
+    number: <numberBetween(1, 99999)>
