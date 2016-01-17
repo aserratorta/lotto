@@ -16,6 +16,7 @@
         "symfony/symfony": "2.8.*",
         "doctrine/orm": "^2.4.8",
         "doctrine/doctrine-bundle": "~1.4",
+        "hautelook/alice-bundle": "^1.0",
         "knplabs/knp-menu-bundle": "^2.0",
         "sonata-project/admin-bundle": "2.4.x-dev",
         "sonata-project/doctrine-orm-admin-bundle": "2.4.x-dev",
