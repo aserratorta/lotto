@@ -7,7 +7,7 @@ services:
         class: AppBundle\Admin\LottoNumberAdmin
         arguments: [ ~, AppBundle\Entity\LottoNumber, AppBundle:Admin\LottoNumberAdmin,  ]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: "Lottery Numbers", group: "Web" }
+            - { name: sonata.admin, manager_type: orm, label: "Lottery Numbers", group: "" }
 
 parameters:
 #    parameter_name: value

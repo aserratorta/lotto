@@ -2,6 +2,7 @@
 
 namespace AppBundle\Admin;
 
+use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
@@ -14,7 +15,7 @@ use Sonata\AdminBundle\Route\RouteCollection;
  * @package  AppBundle\Admin
  * @author   Anton Serra <aserratorta@gmail.com>
  */
-class LottoNumberAdmin
+class LottoNumberAdmin extends Admin
 {
     protected function configureRoutes(RouteCollection $collection)
     {
