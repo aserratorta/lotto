@@ -14,8 +14,11 @@
     "require": {
         "php": ">=5.3.9",
         "symfony/symfony": "2.8.*",
-        "doctrine/orm": "^2.4.8",
         "doctrine/doctrine-bundle": "~1.4",
+        "doctrine/doctrine-fixtures-bundle": "^2.3",
+        "doctrine/doctrine-migrations-bundle": "^1.0",
+        "doctrine/migrations": "^1.0",
+        "doctrine/orm": "^2.4.8",
         "hautelook/alice-bundle": "^1.0",
         "knplabs/knp-menu-bundle": "^2.0",
         "sonata-project/admin-bundle": "2.4.x-dev",

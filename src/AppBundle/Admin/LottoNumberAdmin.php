@@ -17,11 +17,32 @@ use Sonata\AdminBundle\Route\RouteCollection;
  */
 class LottoNumberAdmin extends Admin
 {
+    protected $classnameLabel = 'Lotto Number';
+    protected $baseRoutePattern = 'web/lotto-number';
+    protected $datagridValues = array(
+        '_sort_by'    => 'year',
+        '_sort_order' => 'desc',
+    );
+
     protected function configureRoutes(RouteCollection $collection)
     {
         $collection
             ->remove('batch');
     }
+
+    /**
+     * Remove batch action list view first column
+     *
+     * @return array
+     */
+    public function getBatchActions()
+    {
+        $actions = parent::getBatchActions();
+        unset($actions['delete']);
+
+        return $actions;
+    }
+
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper->add('name', 'text');
@@ -29,11 +50,35 @@ class LottoNumberAdmin extends Admin
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
-        $datagridMapper->add('name');
+        $datagridMapper->add('number');
     }
 
     protected function configureListFields(ListMapper $listMapper)
     {
-        $listMapper->addIdentifier('name');
+        $listMapper
+            ->add(
+                'year',
+                null,
+                array(
+                    'editable' => true,
+                )
+            )
+            ->add(
+                'number',
+                null,
+                array(
+                    'editable'    => true,
+                )
+            )
+            ->add(
+                '_action',
+                'actions',
+                array(
+                    'actions' => array(
+                        'edit'   => array(),
+                        'delete' => array(),
+                    ),
+                )
+            );
     }
 }
