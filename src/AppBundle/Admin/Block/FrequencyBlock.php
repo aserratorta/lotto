@@ -18,6 +18,22 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
  */
 class FrequencyBlock extends BaseBlockService
 {
+    /** @var EntityManager */
+    private $em;
+
+    /**
+     * Constructor
+     *
+     * @param string          $name
+     * @param EngineInterface $templating
+     * @param EntityManager   $em
+     */
+    public function __construct($name, EngineInterface $templating, EntityManager $em)
+    {
+        parent::__construct($name, $templating);
+        $this->em = $em;
+    }
+
     /**
      * Execute
      *
@@ -34,7 +50,7 @@ class FrequencyBlock extends BaseBlockService
                 'block'           => $blockContext->getBlock(),
                 'settings'        => $blockContext->getSettings(),
                 'title'           => 'Frequency Block',
-//                'pendingMessages' => $this->em->getRepository('AppBundle:ContactMessage')->getPendingMessagesAmount(),
+                'numberZeroFrequency' => $this->em->getRepository('AppBundle:LottoNumber')->getNumberZeroFrequency(),
             ),
             $response
         );

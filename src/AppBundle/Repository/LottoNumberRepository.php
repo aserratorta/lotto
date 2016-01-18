@@ -12,4 +12,10 @@ use Doctrine\ORM\EntityRepository;
  */
 class LottoNumberRepository extends EntityRepository
 {
+    public function getNumberZeroFrequency()
+    {
+        return 6;
+    }
+
+
 }

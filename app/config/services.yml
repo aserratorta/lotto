@@ -14,7 +14,7 @@ services:
         class: AppBundle\Admin\Block\FrequencyBlock
         tags:
             - { name: sonata.block }
-        arguments: [ "sonata.admin.block.messages", "@templating" ]
+        arguments: [ "sonata.admin.block.messages", "@templating", "@doctrine.orm.entity_manager" ]
 
 parameters:
 #    parameter_name: value
