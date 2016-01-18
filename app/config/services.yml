@@ -3,7 +3,7 @@
 
 services:
 # Sonata Admins
-    admin.contact:
+    admin.lotto_number:
         class: AppBundle\Admin\LottoNumberAdmin
         arguments: [ ~, AppBundle\Entity\LottoNumber, ~  ]
         tags:
