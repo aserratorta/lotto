@@ -85,7 +85,7 @@ sonata_block:
         sonata.admin.block.admin_list:  ~
         sonata.user.block.menu:         ~
         sonata.block.service.text:      ~
-        admin.block.messages:           ~
+        admin.block.frequency:           ~
 
 sonata_admin:
     title: "Lotto Numbers"
@@ -114,6 +114,10 @@ sonata_admin:
             -
                 position: top
                 type: sonata.admin.block.admin_list
+                class: col-md-6
+            -
+                position: top
+                type: admin.block.frequency
                 class: col-md-6
 #                settings:
 #                    groups: [ Web ]
