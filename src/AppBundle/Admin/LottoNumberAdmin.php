@@ -45,16 +45,37 @@ class LottoNumberAdmin extends Admin
 
     protected function configureFormFields(FormMapper $formMapper)
     {
-        $formMapper->add('name', 'text');
+        $formMapper
+            ->add(
+                'year',
+                null,
+                array()
+            )
+            ->add(
+                'number',
+                null,
+                array()
+            );
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
-        $datagridMapper->add('number');
+        $datagridMapper
+            ->add(
+                'year',
+                null,
+                array()
+            )
+            ->add(
+                'number',
+                null,
+                array()
+            );
     }
 
     protected function configureListFields(ListMapper $listMapper)
     {
+        unset($this->listModes['mosaic']);
         $listMapper
             ->add(
                 'year',
