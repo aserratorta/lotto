@@ -3,6 +3,9 @@
 namespace AppBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\ORM\QueryBuilder;
+
 
 /**
  * LottoNumberRepository
@@ -14,7 +17,21 @@ class LottoNumberRepository extends EntityRepository
 {
     public function getNumberZeroFrequency()
     {
-        return 6;
+        $numbers = $this->getDoctrine()->getRepository('AppBundle:LottoNumber')->findAll();
+        $numbers = array ('number');
+
+        foreach ($numbers as $number)
+        {
+            $lastDigit = $number[4];
+
+            if ($lastDigit == 0)
+            {
+                $countLastDigit = $countLastDigit + 1;
+            }
+        }
+
+        return $countLastDigit / 100;
+
     }
 
 
