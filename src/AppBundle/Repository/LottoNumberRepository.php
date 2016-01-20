@@ -19,7 +19,7 @@ class LottoNumberRepository extends EntityRepository
         $numbers = $this->_em->getRepository('AppBundle:LottoNumber')->findAll();
 
         $amount = 0;
-        $zeroAmount = 0;
+        $digitAmount = 0;
 
         /** @var LottoNumber $lottoNumber */
         foreach ($numbers as $lottoNumber)
@@ -30,7 +30,7 @@ class LottoNumberRepository extends EntityRepository
 
             if ($lastDigit == $digit)
             {
-                $zeroAmount = $zeroAmount + 1;
+                $digitAmount = $digitAmount + 1;
             }
         }
 
@@ -39,6 +39,6 @@ class LottoNumberRepository extends EntityRepository
             return 0;
         }
 
-        return round( $zeroAmount / $amount, 2 ) * 100;
+        return round( $digitAmount / $amount, 2 ) * 100;
     }
 }
