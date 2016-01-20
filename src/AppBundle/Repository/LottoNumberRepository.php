@@ -13,7 +13,7 @@ use Doctrine\ORM\EntityRepository;
  */
 class LottoNumberRepository extends EntityRepository
 {
-    public function getNumberZeroFrequency()
+    public function getNumberDigitFrequency($digit)
     {
 
         $numbers = $this->_em->getRepository('AppBundle:LottoNumber')->findAll();
@@ -28,7 +28,7 @@ class LottoNumberRepository extends EntityRepository
 
             $lastDigit = $lottoNumber->getNumber() % 10;
 
-            if ($lastDigit == 0)
+            if ($lastDigit == $digit)
             {
                 $zeroAmount = $zeroAmount + 1;
             }

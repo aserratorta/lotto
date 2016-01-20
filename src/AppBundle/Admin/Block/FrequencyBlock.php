@@ -50,7 +50,16 @@ class FrequencyBlock extends BaseBlockService
                 'block'           => $blockContext->getBlock(),
                 'settings'        => $blockContext->getSettings(),
                 'title'           => 'Frequency Block',
-                'numberZeroFrequency' => $this->em->getRepository('AppBundle:LottoNumber')->getNumberZeroFrequency(),
+                'number0Frequency' => $this->em->getRepository('AppBundle:LottoNumber')->getNumberDigitFrequency(0),
+                'number1Frequency' => $this->em->getRepository('AppBundle:LottoNumber')->getNumberDigitFrequency(1),
+                'number2Frequency' => $this->em->getRepository('AppBundle:LottoNumber')->getNumberDigitFrequency(2),
+                'number3Frequency' => $this->em->getRepository('AppBundle:LottoNumber')->getNumberDigitFrequency(3),
+                'number4Frequency' => $this->em->getRepository('AppBundle:LottoNumber')->getNumberDigitFrequency(4),
+                'number5Frequency' => $this->em->getRepository('AppBundle:LottoNumber')->getNumberDigitFrequency(5),
+                'number6Frequency' => $this->em->getRepository('AppBundle:LottoNumber')->getNumberDigitFrequency(6),
+                'number7Frequency' => $this->em->getRepository('AppBundle:LottoNumber')->getNumberDigitFrequency(7),
+                'number8Frequency' => $this->em->getRepository('AppBundle:LottoNumber')->getNumberDigitFrequency(8),
+                'number9Frequency' => $this->em->getRepository('AppBundle:LottoNumber')->getNumberDigitFrequency(9),
             ),
             $response
         );
