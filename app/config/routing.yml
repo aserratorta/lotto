@@ -2,9 +2,9 @@ app:
     resource: "@AppBundle/Controller/"
     type:     annotation
 
-#sonata:
-#    resource: "@SonataAdminBundle/Resources/config/routing/sonata_admin.xml"
-#    prefix:   /admin
+sonata:
+    resource: "@SonataAdminBundle/Resources/config/routing/sonata_admin.xml"
+    prefix:   /admin
 
 _sonata_admin:
     resource: .
@@ -14,5 +14,5 @@ _sonata_admin:
 easy_admin_bundle:
     resource: "@EasyAdminBundle/Controller/"
     type:     annotation
-    prefix:   /admin
+    prefix:   /_second_backend
 
