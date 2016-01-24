@@ -122,6 +122,10 @@ sonata_admin:
 #                settings:
 #                    groups: [ Web ]
 
+easy_admin:
+    entities:
+        - AppBundle\Entity\LottoNumber
+
 
 
 
