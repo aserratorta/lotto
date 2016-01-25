@@ -128,7 +128,6 @@ easy_admin:
         class: AppBundle\Entity\LottoNumber
         form:
           fields: ['id', { property: 'Year', label: 'Any'}, { property: 'Number', label: 'Número'}, 'createdAt']
-              - { property: 'createdAt', type: 'utcdatetime' }
           title: 'Add LottoNumber'
         new:
           fields: [{ property: 'Year', label: 'Any'}, { property: 'Number', label: 'Número'} ]
