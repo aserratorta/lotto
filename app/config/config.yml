@@ -126,6 +126,18 @@ easy_admin:
     entities:
       LottoNumber:
         class: AppBundle\Entity\LottoNumber
+        form:
+          fields: ['id', { property: 'Year', label: 'Any'}, { property: 'Number', label: 'Número'}, 'createdAt']
+              - { property: 'createdAt', type: 'utcdatetime' }
+          title: 'Add LottoNumber'
+        new:
+          fields: [{ property: 'Year', label: 'Any'}, { property: 'Number', label: 'Número'} ]
+        edit:
+          title:  'Edit LottoNumber'
+        label: Números premiats
+        list:
+          title: 'Llista de números premiats'
+          fields: ['id', { property: 'Year', label: 'Any'}, { property: 'Number', label: 'Número'}, 'createdAt' ]
     site_name: 'LOTTO <em style="font-size: 80%; color: yellow">Numbers.</em>'
 
 
