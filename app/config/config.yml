@@ -6,7 +6,7 @@ imports:
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: en
+    locale: ca
 
 framework:
     #esi:             ~
@@ -127,16 +127,16 @@ easy_admin:
       LottoNumber:
         class: AppBundle\Entity\LottoNumber
         form:
-          fields: ['id', { property: 'Year', label: 'Any'}, { property: 'Number', label: 'Número'}, 'createdAt']
+          fields: ['id', { property: 'year', label: 'Any'}, { property: 'number', label: 'Número'}, 'createdAt']
           title: 'Add LottoNumber'
         new:
-          fields: [{ property: 'Year', label: 'Any'}, { property: 'Number', label: 'Número'} ]
+          fields: [{ property: 'year', label: 'Any'}, { property: 'number', label: 'Número'} ]
         edit:
           title:  'Edit LottoNumber'
         label: Números premiats
         list:
           title: 'Llista de números premiats'
-          fields: ['id', { property: 'Year', label: 'Any'}, { property: 'Number', label: 'Número'}, 'createdAt' ]
+          fields: ['id', { property: 'year'}, { property: 'number', label: 'Número'}, 'createdAt' ]
     site_name: 'LOTTO <em style="font-size: 80%; color: yellow">Numbers.</em>'
 
 
